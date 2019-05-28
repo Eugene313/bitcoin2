@@ -1,0 +1,100 @@
+<template>
+  <header>
+    <div class="row">
+      <div class="menu">
+        <div class="logo"><img src="../../assets/img/logo.png" alt="logo" /></div>
+        <div class="nav_wrap">
+          <div class="nav_link"> <a href="#contact">contact Us</a></div>
+        </div>
+      </div>
+      <div class="tools"><i class="fas fa-search"></i>
+        <div class="mobile"><i class="fas fa-bars"></i></div>
+      </div>
+  </div>
+</header>
+</template>
+<style lang="sass" scoped>
+header
+    width: 100%
+    height: 110px
+    background: #000000
+    display: flex
+    .row
+        position relative
+        width: 100%
+        max-width: 1400px
+        margin: 0 auto
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .menu
+            height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            text-transform: uppercase
+            z-index: 10
+            .logo
+                padding: 0 30px
+                img
+                    @media (max-width: 640px)
+                        width: 50px
+            .nav_wrap
+                display: flex
+                justify-content: center
+                align-items: center
+                transition: 0.5s
+                z-index: -1
+                @media (max-width: 750px)
+                    background: #000000
+                    position: absolute
+                    width: 100%
+                    top: 99px
+                    right: -100%
+                    flex-direction: column
+                    opacity: 0
+                    z-index: -1
+                .nav_link
+                    padding: 0 15px
+                    color: #ffffff
+                    font-family: "Myriad"
+                    font-size: 13px
+                    a
+                        color: #ffffff
+                        text-decoration: none
+                        &:hover
+                            color: #9bd1ff
+                        @media (max-width:750px)
+                            font-size: 1rem
+                    @media (max-width: 750px)
+                        padding: 20px 0
+                        width: 100%
+                        text-align: center
+            .active
+                right: 0
+                opacity: 1
+                z-index: 11
+        .tools
+            display: flex
+            align-items: center
+            width: 200px
+            height: 100%
+            color: #ffffff
+            padding: 0 10px
+            i
+                padding: 0 20px
+                @media (max-width:640px)
+                    padding: 0 10px
+            @media (max-width: 750px)
+                width: 100%
+                justify-content: space-between                  
+            .mobile
+                display: none
+                cursor: pointer
+                i
+                    font-size: 38px
+                @media (max-width: 750px)
+                    display: inline-block
+
+</style>
+
